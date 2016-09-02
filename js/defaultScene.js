@@ -66,7 +66,7 @@ function  SphereImg(img,name,rotation) {
 
     var defaultSphereEnvMaterial = new THREE.MeshBasicMaterial({
         map: new THREE.TextureLoader().load(img,function () {
-            $(".loading").trigger('sphereCreated');
+            $(".loading").hide();
         })
     });
 
