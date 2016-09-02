@@ -67,7 +67,7 @@ function  SphereImg(img,name,rotation) {
     var defaultSphereEnvMaterial = new THREE.MeshBasicMaterial({
         map: new THREE.TextureLoader().load(img,function () {
             var t=setTimeout(function(){
-                $(".loading").hide();
+                $(".loading").fadeOut();
                 clearTimeout(t);
             },3000)
         })
