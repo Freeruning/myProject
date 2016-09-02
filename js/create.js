@@ -30,7 +30,7 @@
     defaultDirectionalLight.shadow.camera.zoom = 4;
 
     //创建新的相机
-    var camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.01, 10000);
+    var camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.01, 12000);
 
     //增加一个状态更新（FPS）查看器
     stats = new Stats();
@@ -79,7 +79,7 @@
         );
         controls.noPan = true;
         controls.minDistance =0.15;
-        controls.maxDistance = 10000;
+        controls.maxDistance = 6000;
         controls.zoomSpeed = 3;
         //controls.noZoom = true;
 
