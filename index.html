@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content=" initial-scale=1,maximum-scale=1,width=device-width">
+    <title>周轩的个人主页 h5 3d 前端</title>
+    <meta name="author" content="zhouxuan">
+    <link rel="shortcut icon" type="text/css" href="images/user_logo.ico">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="lib/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/webgl/three.min.js"></script>
+    <script type="text/javascript" src="lib/webgl/OBJLoader.js"></script>
+    <script src="lib/webgl/DeviceOrientationControls.js"></script>
+    <script src="lib/webgl/OrbitControls.js"></script>
+    <script src="lib/webgl/cardBoardEffect.js"></script>
+    <script src="lib/webgl/stats.min.js"></script>
+    <script src="lib/jquery.qrcode.min.js"></script>
+    <style>
+        html, body {  width: 100%;  height: 100%;   overflow: hidden;background-color: #000;}
+
+    </style>
+    <script>
+        //webgl变量
+        var sceneList = [
+            {
+                name : "默认背景", //名称
+                type : 0, //类型
+                objname : "defaultSphereEnvMesh", //objname对象名称
+                src : 'images/full.jpg', //模型贴图（图片背景图）
+                args : {
+                    rotation : 0
+                }
+            }
+        ];
+    </script>
+</head>
+<body >
+<!--微信分享图片-->
+<div style='margin:0 auto;width:0;height:0;overflow:hidden;'>
+    <img src="images/user_logo_wx.jpg" >
+</div>
+<!--loading-->
+<div class="loading fixed-mask"><p class="middle">loading...</p></div>
+<!--全屏、vr模式-->
+<ul class="preview-full">
+    <li class="p-full" id="enterFull" title="全屏模式" ></li>
+    <li class="p-vr" id="enterVr" title="VR模式" ></li>
+    <li class="p-music music-1 animated infinite hinge" id="enterMusic" title="音乐开关" ></li>
+    <li class="p-share" id="shareSmall"></li>
+
+</ul>
+<div id="logo" class="title" style="display: none;">
+    <div class="dot-img pa">
+        <div class="dot" ></div>
+        <div class="dot1"></div>
+        <div class="dot2"></div>
+        <img src="images/user_logo.jpg" class="animated infinite hinge rotate" >
+    </div>
+</div>
+
+<div class="full-mask"></div>
+<div id="myIntro" class="row text-center middle">
+    <img src="images/user_logo.jpg" alt="Logo" class="tm-logo">
+    <h1 class="name">哈哈</h1>
+    <p class="text">哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈 </p>
+    <a href="#" class="a-link">哈哈哈花</a>
+    <a href="resume.html" class="a-link">哈哈哈花</a>
+    <!--<h1 class="name">周轩</h1>-->
+    <!--<p class="text">hi，我是一名前端工程师，精通响应式设计，熟悉h5页面开发，熟悉Three.js 3d引擎... </p>-->
+    <!--<a href="#" class="a-link">个人简历</a>-->
+    <!--<a href="resume.html" class="a-link">项目作品</a>-->
+</div>
+
+<div class="mask-all"><div class="qrcode" id="mask-qrcode" ></div><span class="mask-close">x</span></div>
+<audio id="creationMusic"  src="music/3.mp3" loop hidden="hidden"></audio>
+
+<script src="js/defaultScene.js"></script>
+<script src="js/snow.js"></script>
+<script src="js/create.js"></script>
+
+<script src="js/scripts.js"></script>
+<script>
+    $(document).on('contextmenu', function(e) { return false; });//删除右键菜单
+
+    function orient() {
+        if (window.orientation == 0 || window.orientation == 180) {
+            if( $("#myIntro").css("display") =="none") $('.preview-full').show();
+            $('#enterFull').hide();
+            $('#enterVr').css("top","5px");
+            $('#enterMusic').removeClass("music rotate").addClass("music-1").css("top","60px");
+            onMusic=false;
+            orientation = 'portrait';
+            return false;
+        }
+        else if (window.orientation == 90 || window.orientation == -90) {
+            $('.preview-full').hide();
+            orientation = 'landscape';
+            return false;
+        }
+    }
+    $(window).on( 'orientationchange', function(e){
+        orient();
+    });
+
+    $(function(){
+        $("#mask-qrcode").qrcode({
+            render: "canvas",
+            width: 120,
+            height:120,
+            text: window.location.href
+        });
+
+        $('#enterVr').on('click',function(){
+            toggleVR();
+        });
+
+        $('#shareSmall').on('click',function(){
+            $('.mask-all').show();
+        });
+        $('.mask-all').on('click',function(){
+            $(this).hide();
+        });
+
+        $('#enterFull').click(function () {
+            var element=document.body;
+            if(element.requestFullscreen) {
+                element.requestFullscreen();
+            } else if(element.mozRequestFullScreen) {
+                element.mozRequestFullScreen();
+            } else if(element.webkitRequestFullscreen) {
+                element.webkitRequestFullscreen();
+            } else if(element.msRequestFullscreen) {
+                element.msRequestFullscreen();
+            }
+            $("#logo,.preview-full").hide();
+        });
+
+        $('#enterMusic').on('click',onPalyMusic);
+
+        orient();
+
+        document.body.addEventListener('touchmove', function(e) {
+            e.stopPropagation();
+            e.preventDefault();
+        });
+
+        toggleAutoRotate();   //自转
+
+        $(".full-mask").on("click",function () {
+            $(this).hide(200);
+            $("#myIntro").hide(200);
+            $("#logo,.preview-full").show();
+        });
+        $("#logo").on("click",function () {
+            $("#myIntro,.full-mask").show(200);
+            $(this).hide();
+            $(".preview-full").hide();
+        });
+        $(".loading").on("sphereCreated",function () {
+            $(this).hide();
+        })
+
+    });
+
+
+
+</script>
+<script>
+
+</script>
+
+
+
+</body>
+</html>

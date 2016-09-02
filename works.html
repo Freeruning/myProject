@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>周轩的个人作品 h5 3d 前端</title>
+    <meta name="author" content="zhouxuan">
+    <!-- Bootstrap -->
+    <link rel="icon" type="image/png" href="images/user_logo.ico">
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/style.css" rel="stylesheet"/>
+    <script src="lib/jquery.min.js"></script>
+    <!--列表展示-->
+    <script src="lib/imagesloaded.pkgd.min.js"></script>
+    <script src="lib/isotope.pkgd.min.js"></script>
+    <script src="lib/bootstrap.min.js"></script>
+    <script src="js/works.js"></script>
+    <style>
+        body{background: url(images/home-bg.jpg) #cce8cf; }
+        .github,.jian,.wx{width: 40px;height: 40px;border-radius: 20px;margin:18px;}
+        .github{background-color: #f2f2f2;}
+        footer .connection{margin-bottom: 20px;}
+        footer .connection div{margin-top:15px; }
+        footer .connection div:hover{color:#fff;}
+        .btn-primary:hover,.btn-primary:focus{background-color: #023562;}
+        .navbar-header .logo{width: 30px;height: 30px;margin: 10px 0 0 15px;border-radius:50%; }
+        .navbar-header .logo:hover{ -webkit-box-shadow:0 0 10px 5px #0CC;  -moz-box-shadow:0 0 10px 5px #0CC; box-shadow:0 0 10px 5px #0CC;  }
+    </style>
+
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="index.html">
+
+                <img src="images/user_logo.jpg" class="logo animated infinite hinge rotate" >
+
+            </a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="text-center"><a href="index.html">主页</a></li>
+                <li class="text-center active"><a href="resume.html">11111</a></li>
+                <li class="text-center"><a href="resume.html">222222</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- list -->
+<div class="container list">
+    <div class="row">
+        <div class="col-sm-12 text-center">
+            <h1>PROJECT</h1>
+        </div>
+    </div>
+    <div id="filters" class="row menu">
+        <div class="col-sm-12 text-center">
+            <button type="button" class="btn btn-success" data-filter=".item">全部</button>
+            <button type="button" class="btn btn-primary" data-filter=".responsive">响应式网站</button>
+            <button type="button" class="btn btn-primary" data-filter=".html5">H5</button>
+            <button type="button" class="btn btn-primary" data-filter=".game">Three.js/VR</button>
+        </div>
+    </div>
+    <div class="row" style="margin-left: 0;margin-right: 0;">
+        <div id="container-sort" class="project">
+            <div class="item col-md-3 col-xs-6 thumb html5">
+                <!--<a href="http://www.awssummit.cn/H5/3D_AWS/3d.html">-->
+                <a href="item/aws/aws.html">
+                    <div class="thumb-wrap">
+                        <div class="over-hid rel">
+                            <div class="mask"><i class="fa fa-link fa-3x"></i></div>
+                            <img class="img-responsive" src="img/thumb/aws.jpg"/>
+                        </div>
+                        <div class="describe text-center">亚马逊峰会邀请函(本地)</div>
+                    </div>
+                </a>
+            </div>
+            <div class="item col-md-3 col-xs-6 thumb html5">
+                <a href="http://www.awssummit.cn/H5/3D_AWS/3d.html">
+                    <div class="thumb-wrap">
+                        <div class="over-hid rel">
+                            <div class="mask"><i class="fa fa-link fa-3x"></i></div>
+                            <img class="img-responsive" src="img/thumb/aws.jpg"/>
+                        </div>
+                        <div class="describe text-center">亚马逊峰会邀请函(线上)</div>
+                    </div>
+                </a>
+            </div>
+            <div class="item col-md-3 col-xs-6 thumb game html5 responsive">
+                <a href="http://www.nitter.cn">
+                    <div class="thumb-wrap">
+                        <div class="over-hid rel">
+                            <div class="mask"><i class="fa fa-link fa-3x"></i></div>
+                            <img class="img-responsive" src="img/thumb/nitter.jpg"/>
+                        </div>
+                        <div class="describe text-center">你特现实 vr平台</div>
+                    </div>
+                </a>
+            </div>
+            <div class="item col-md-3 col-xs-6 thumb responsive">
+                <a href="##">
+                    <div class="thumb-wrap">
+                        <div class="over-hid rel">
+                            <div class="mask"><i class="fa fa-link fa-3x"></i></div>
+                            <img class="img-responsive" src="img/thumb/2048.jpg"/>
+                        </div>
+                        <div class="describe text-center">漾美</div>
+                    </div>
+                </a>
+            </div>
+            <div class="item col-md-3 col-xs-6 thumb game">
+                <a href="##">
+                    <div class="thumb-wrap">
+                        <div class="over-hid rel">
+                            <div class="mask"><i class="fa fa-link fa-3x"></i></div>
+                            <img class="img-responsive" src="img/thumb/2048.jpg"/>
+                        </div>
+                        <div class="describe text-center">2048</div>
+                    </div>
+                </a>
+            </div>
+            <div class="item col-md-3 col-xs-6 thumb html5">
+                <a href="##">
+                    <div class="thumb-wrap">
+                        <div class="over-hid rel">
+                            <div class="mask"><i class="fa fa-link fa-3x"></i></div>
+                            <img class="img-responsive" src="img/thumb/2048.jpg"/>
+                        </div>
+                        <div class="describe text-center">旅游专题</div>
+                    </div>
+                </a>
+            </div>
+            <div class="item col-md-3 col-xs-6 thumb html5 game">
+                <a href="##">
+                    <div class="thumb-wrap">
+                        <div class="over-hid rel">
+                            <div class="mask"><i class="fa fa-link fa-3x"></i></div>
+                            <img class="img-responsive" src="img/thumb/2048.jpg"/>
+                        </div>
+                        <div class="describe text-center">电子商务</div>
+                    </div>
+                </a>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+<!-- /.list -->
+<footer>
+    <div class="container">
+        <div class="row text-center">
+            <a href="https://github.com/Freeruning/myProject"><img class="github" src="img/github.png" alt="我的github" title="我的github"></a>
+            <a href="http://www.jianshu.com/users/81b5abab2ca5/latest_articles"><img class="jian" src="img/jian.png" alt="我的简书" title="我的简书"></a>
+            <div class="rel" style="display: inline-block;">
+                <a href="javascript:void(0);">
+                    <img class="wx" src="img/weixin.png" alt="我的微信" title="我的微信">
+                    <div class="tip">
+                        <img src="images/weixin_code.jpg">
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="row text-center connection">
+            <div class="col-md-2 col-md-offset-2">电话：15695652130</div>
+            <div class="col-lg-4 col-md-4">地址：北京市朝阳区</div>
+            <div class="col-lg-3 col-md-3">邮箱：zhouxuanoo@icloud.com</div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <span>©2016 </span><a href="##">BY: ZHOUXUAN</a><span class="hidden-xs">请联系我！</span>
+    </div>
+</footer>
+
+</body>
+</html>
