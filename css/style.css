@@ -12,7 +12,9 @@ body,textarea,input,button,select{font:12px/1.14  "Microsoft YaHei","黑体","�
 * {box-sizing: border-box;}
 
 
-
+/*模糊、毛玻璃*/
+.blur {  -webkit-filter: blur(80px);  -moz-filter: blur(80px);  -ms-filter: blur(80px);  filter: blur(80px);  }
+.blur-1 {  -webkit-filter: blur(3px);  -moz-filter: blur(3px);  -ms-filter: blur(3px);  filter: blur(3px);  }
 .img-responsive {  display: block;  max-width: 100%;  height: auto;  }
 .pa{position: absolute;}
 .fixed-mask{position: fixed;top: 0;left:0;bottom: 0;right:0;background-color: #000;z-index:1000;}
