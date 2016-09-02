@@ -15,7 +15,7 @@ body,textarea,input,button,select{font:12px/1.14  "Microsoft YaHei","黑体","�
 
 .img-responsive {  display: block;  max-width: 100%;  height: auto;  }
 .pa{position: absolute;}
-.fixed-mask{position: fixed;top: 0;left:0;bottom: 0;right:0;background-color: #000;z-index:10;}
+.fixed-mask{position: fixed;top: 0;left:0;bottom: 0;right:0;background-color: #000;z-index:1000;}
 .full-mask{position: absolute;top: 0;left:0;bottom: 0;right:0;background-color: rgba(0,0,0,0.7);}
 .loading{background:#000 url("../images/loading.gif") center center/400px 300px no-repeat;color: #fff;font-size: 15px;}
 .loading .middle{top: 50%;left: 50%;}
