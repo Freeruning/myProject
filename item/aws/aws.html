@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>与云共舞-AWS技术峰会北京2016</title>
+    <meta name="viewport" content="initial-scale=1, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0, width=device-width">
+    <!--不缓存-->
+    <!--<meta http-equiv="pragma" content="no-cache">-->
+    <!--<meta http-equiv="Cache-Control" content="no-cache, must-revalidate">-->
+    <!--<meta http-equiv="expires" content="0">-->
+    <link href="css_aws/style_aws.css" rel="stylesheet">
+    <script src="../../lib/jquery.min.js"></script>
+    <script src="../../lib/zepto.min.js"></script>
+    <script src="js_aws/popImg_aws.js"></script>
+    <script src="js_aws/main_aws.js"></script>
+    <script src="../../lib/jquery.qrcode.min.js"></script>
+<style>
+    .fixed-mask{display:none;position: fixed;top: 0;left:0;bottom: 0;right:0;background-color: rgba(0,0,0,0.8);z-index:1001;}
+    .fixed-mask .mask-body{position: absolute;top: 38%;left:0;width: 100%;text-align: center;color:#fff;font-size: 24px;}
+    #mask-qrcode {width:150px;height:150px;margin:30px auto 0;-webkit-box-shadow:0 0 10px 5px #fff;  -moz-box-shadow:0 0 10px 5px #fff; box-shadow:0 0 10px 5px #fff;}
+    #btn{display:none;position:fixed;width:30px;height:30px;padding:10px;cursor:pointer;z-index: 100;left:50px;top:50px;background-color: #000;color: #fff;font-size: 14px;border-radius: 50%; }
+</style>
+</head>
+<div id="fixedMask" class="fixed-mask">
+    <div class="mask-body">
+        <p>最好使用手机查看，以体验做好的效果</p>
+        <div id="mask-qrcode"></div>
+    </div>
+</div>
+<div id="btn">手机扫描</div>
+<body>
+<!--微信分享图片-->
+<div style='margin:0 auto;width:0;height:0;overflow:hidden;'>
+    <img src="image_aws/weixin_logo.png" >
+</div>
+<!--手机二维码-->
+
+<!--loading 界面-->
+<div id="loading">
+    <div class="load-fade">
+        <img class="animated infinite hinge_3 fadeToggle" src="image_aws/fade_2.png">
+        <img class="animated infinite hinge_4 fadeToggle" src="image_aws/fade_1.png">
+        <img class="animated infinite hinge_5 fadeToggle" src="image_aws/fade_1.png">
+    </div>
+    <img class="load-1" src="image_aws/load_1.png">
+    <div class="loading3">
+        loading
+
+    </div>
+    <img class="load-2" src="image_aws/load_2.png">
+</div>
+<!--主界面-->
+<div class="main" style="left:0;top: 0;" >
+    <!--内容区-->
+    <div id="main" class="bg" style="">
+
+        <img id="background" class="threeD" data-name="background" src="" >
+        <img class="threeD" data-name="tree_1" style="left:0;top: 131px;"  src="">
+        <div class="cloud">
+            <img class="animated infinite hinge_90" data-class="slideInLeft" src="image_aws/cloud.png" style="left:0;top: 30px;">
+            <img class="animated infinite hinge_80 " data-class="slideInToggle" src="image_aws/cloud.png" style="left:1000px;top: 40px;">
+            <img class="animated infinite hinge_85 " data-class="slideInRight" src="image_aws/cloud.png" style="left:2016px;top: 100px;">
+        </div>
+        <div class="car">
+            <img class="animated infinite hinge_30 " data-class="slideCar_1" src="image_aws/car/car_black.png" style="left:960px;top: 126px;">
+            <img class="animated infinite hinge_30 " data-class="slideCar_2" src="image_aws/car/car_blue.png " style="left:584px;top: 502px;">
+            <img class="animated infinite hinge_30 " data-class="slideCar_3" src="image_aws/car/car_blue.png" style="left:1045px;top: 314px;">
+        </div>
+        <img class="threeD" data-name="women" style="left:143px;top: 353px;" src="">
+        <img class="animated infinite hinge_4 swing_1" src="image_aws/light.png" style="left:298px;top: 360px;">
+        <img class="animated infinite hinge_4 swing_2" src="image_aws/light.png" style="left:210px;top: 380px;">
+        <img class="threeD" data-name="build_1" style="left:377px;top: 273px;" src="">
+        <img class="threeD" data-name="bird"  style="left:692px;top: 255px;" src="">
+        <img class="threeD" data-name="hack"  style="left:384px;top: 490px;" src="">
+        <img class="code" src="image_aws/code.gif" style="left:673px;top: 530px;">
+        <img class="threeD" data-name="remind"  style="left:950px;top: 680px;" src="">
+        <img class="threeD" data-name="build_4" style="left:1349px;top: 122px;" src="">
+        <img class="threeD" data-name="build" style="left:709px;top: 18px;" src="">
+        <img class="threeD" data-name="word" style="left:536px;top: 725px;" src="">
+
+        <div >
+
+            <img class="threeD" data-name="tree"   style="left:1700px;top: 544px;" src="">
+            <div class="title title1 " data-src="pop_7" style="left:1810px;top: 430px;" >
+
+                <div class="dot-img">
+                    <div class="dot" ></div>
+                    <div class="dot1" ></div>
+                    <img src="image_aws/title_icon.png">
+                </div>
+            </div>
+            <div class="title title1" data-src="pop_5"  style="left:640px;top: 320px;" >
+                <div class="dot-img">
+                    <div class="dot" ></div>
+                    <div class="dot1" ></div>
+                    <img src="image_aws/title_icon.png">
+                </div>
+            </div>
+            <div class="title title1 " data-src="pop_8" style="left:650px;top: 553px;">
+
+                <div class="dot-img">
+                    <div class="dot" ></div>
+                    <div class="dot1" ></div>
+                    <img src="image_aws/title_icon.png">
+                </div>
+            </div>
+            <div class="title title1" data-src="pop_3"  style="left:1430px;top: 410px;" >
+
+                <div class="dot-img">
+                    <div class="dot" ></div>
+                    <div class="dot1" ></div>
+                    <img src="image_aws/title_icon.png">
+                </div>
+            </div>
+            <div class="title title1" data-src="pop_4" style="left:1050px;top: 750px;">
+                <div class="dot-img">
+                    <div class="dot" ></div>
+                    <div class="dot1" ></div>
+                    <img src="image_aws/title_icon.png">
+                </div>
+            </div>
+            <div class="title title1" data-src="pop_6" style="left:1440px;top: 220px;"  >
+
+                <div class="dot-img">
+                    <div class="dot" ></div>
+                    <div class="dot1" ></div>
+                    <img src="image_aws/title_icon.png">
+                </div>
+            </div>
+            <div class="title title1" data-src="pop_9" style="left:430px;top: 420px;" >
+                <div class="dot-img">
+                    <div class="dot" ></div>
+                    <div class="dot1" ></div>
+                    <img src="image_aws/title_icon.png">
+                </div>
+            </div>
+
+            <!--<img class="title title1 animated hinge_1 " data-src="pop_7" src="image_aws/title_icon.png" style="left:1630px;top: 600px;" data-url="http://awssummit.cn/XDemo/?code=social&trackingcode=h5&yaoqingcode=">-->
+            <!--<img class="title title1 animated hinge_1 " data-src="pop_5" src="image_aws/title_icon.png" style="left:952px;top: 372px;" data-url="http://awssummit.cn/PartnerSummit/?code=social&trackingcode=h5&yaoqingcode=">-->
+            <!--<img class="title title1 animated hinge_1 " data-src="pop_8" src="image_aws/title_icon.png" style="left:650px;top: 553px;" data-url="http://awssummit.cn/Hackathon/?code=social&trackingcode=h5&yaoqingcode=">-->
+            <!--<img class="title title1 animated hinge_1 " data-src="pop_3" src="image_aws/title_icon.png" style="left:1470px;top: 290px;" data-url="http://awssummit.cn/Speaker/?code=social&trackingcode=h5&yaoqingcode=">-->
+            <img id="deck" class="title2 animated hinge_1 six" data-src="pop_1 " src="image_aws/deck_cube.png" style="left:790px;top: 415px;" >
+            <img id="loginImg" class="title2 animated hinge_1 six" src="image_aws/title_5.png" style="left:1134px;top: 522px;" >
+            <!--<img class="title title1 animated hinge_1 " data-src="pop_4" src="image_aws/title_icon.png" style="left:1050px;top: 750px;" data-url="http://awssummit.cn/Training/?code=social&trackingcode=h5&yaoqingcode=">-->
+            <!--<img class="title title1 animated hinge_1 " data-src="pop_6" src="image_aws/title_icon.png" style="left:1210px;top: 372px;" data-url="http://awssummit.cn/CloudSummit/?code=social&trackingcode=h5&yaoqingcode=">-->
+            <!--<img class="title title1 animated hinge_1 " data-src="pop_9" src="image_aws/title_icon.png" style="left:430px;top: 420px;" data-url="http://awssummit.cn/Woman/?code=social&trackingcode=h5&yaoqingcode=">-->
+
+        </div>
+    </div>
+    <img id="qi" class="title1"  data-src="pop_2" src="image_aws/qi_1.png" >
+
+    <!--右侧导航-->
+    <ul class="slide-right">
+        <li><img id="icon1" src="image_aws/icon_1.png"></li>
+        <li><img id="icon2" src="image_aws/icon_2.png"></li>
+    </ul>
+    <div class="slide-mask"></div>
+    <ul id="slideContent" class="slide-content" style="display: none;">
+        <li id="login"><p>报名参会</p></li>
+        <li class="title1" data-src="pop_2" ><p>会议日程</p></li>
+        <li class="title1" data-src="pop_3" ><p>演讲嘉宾</p></li>
+        <li class="title1" data-src="pop_4" ><p>培训与认证</p></li>
+        <li class="title1" data-src="pop_5" ><p>合作伙伴峰会</p></li>
+        <li class="title1" data-src="pop_6" ><p>企业云计算峰会</p></li>
+        <li class="title1" data-src="pop_7"><p>创业创新论坛</p></li>
+        <li class="title1" data-src="pop_8" ><p>黑客马拉松</p></li>
+
+    </ul>
+</div>
+<!--二级界面-->
+<div id="popping">
+    <div id="pop">
+        <a id="popButton"  href="javascript:void(0);"><img src="image_aws/pop/pop_bg.png"></a>
+        <img id="popClose" src="image_aws/pop/pop_close.png">
+    </div>
+
+</div>
+<div id="popping_1">
+    <div id="pop_1"></div>
+</div>
+<!--手机横屏提示-->
+<div id="orientLayer" class="mod-orient-layer">
+    <div class="mod-orient-layer__content">
+        <i class="icon mod-orient-layer__icon-orient"></i>
+
+        <div class="mod-orient-layer__desc">请将手机竖起来哟</div>
+    </div>
+</div>
+
+<audio id="Music" src="music_aws/TestCard.mp3" autoplay loop hidden="hidden"></audio>
+
+</body>
+</html>
