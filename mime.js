@@ -3,7 +3,7 @@
  */
 exports.types = {
 
-    "css": "text/css",
+    "css": "text/css_item1",
 
     "gif": "image_aws/gif",
 

@@ -70,7 +70,7 @@ $(document).ready(function(){
     // $('.list-group a').click(function(e){
     //     e.preventDefault();
     //     var $this = $(this);
-    //     var change = $this.find('>div').css('display');
+    //     var change = $this.find('>div').css_item1('display');
     //     //alert(change);
     //     if(change=='none'){
     //         $this.find('i').removeClass('fa-plus').addClass('fa-minus');
