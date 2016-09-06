@@ -30,7 +30,14 @@ window.onload = function() {
 	$("#upload").click(function () {
 		$("#pano").trigger("click");
 	});
-
+	$(".all").on("click",function () {
+		var header = $("header");
+		if(header.css("top") == "110px"){
+			header.animate({top:"-200px"});
+		}else {
+			header.animate({top:"110px"});
+		}
+	});
 	document.getElementById('pano').addEventListener('change', upload, false);
 };
 
@@ -68,18 +75,6 @@ function loadPredefinedPanorama() {
 
 		// HTML loader
 		loading_html: loader
-
-		// Overlay
-		// overlay: {
-		// 	image: 'overlay.png',
-		// 	size: {
-		// 		width: '42px'
-		// 	},
-		// 	position: {
-		// 		x: 'right',
-		// 		y: 'top'
-		// 	}
-		// }
 	});
 	return PSV;
 }
