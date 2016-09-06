@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c214d333-c21d-44ba-a258-815cd0e6b31d" name="Default" comment="">
+<<<<<<< HEAD
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/item/item1/full/full_1.jpg" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/item/item1/full/full_2.jpg" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/item/item1/full/full_3.jpg" />
@@ -33,6 +34,9 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mime.js" afterPath="$PROJECT_DIR$/mime.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/simpleServer.js" afterPath="$PROJECT_DIR$/simpleServer.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/works.html" afterPath="$PROJECT_DIR$/works.html" />
+=======
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/item/panoramicRoaming/panoramicRoaming.html" afterPath="$PROJECT_DIR$/item/panoramicRoaming/panoramicRoaming.html" />
+>>>>>>> master
     </list>
     <ignored path="myProject.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -66,13 +70,19 @@
       <file leaf-file-name="works.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/works.html">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="144">
               <caret line="6" column="35" selection-start-line="4" selection-start-column="3" selection-end-line="6" selection-end-column="35" />
+=======
+            <state relative-caret-position="984">
+              <caret line="116" column="20" selection-start-line="116" selection-start-column="20" selection-end-line="116" selection-end-column="20" />
+>>>>>>> master
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="item1.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/item/item1/item1.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -81,6 +91,17 @@
               <folding>
                 <element signature="n#header#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#form#0;n#li#6;n#ul#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+=======
+      <file leaf-file-name="panoramicRoaming.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/item/panoramicRoaming/panoramicRoaming.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="528">
+              <caret line="49" column="47" selection-start-line="49" selection-start-column="47" selection-end-line="49" selection-end-column="47" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+>>>>>>> master
               </folding>
             </state>
           </provider>
@@ -159,14 +180,17 @@
       <list>
         <option value="$PROJECT_DIR$/js/create.js" />
         <option value="$PROJECT_DIR$/item/panoramicRoaming/example1.js" />
-        <option value="$PROJECT_DIR$/item/panoramicRoaming/panoramicRoaming.html" />
         <option value="$PROJECT_DIR$/works.html" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/simpleServer.js" />
         <option value="$PROJECT_DIR$/item/item2/example1.js" />
         <option value="$PROJECT_DIR$/item/item2/example1.css" />
         <option value="$PROJECT_DIR$/item/item2/js_item2/item1.js" />
         <option value="$PROJECT_DIR$/item/item2/css_item1/item1.css" />
         <option value="$PROJECT_DIR$/item/item2/item1.html" />
+=======
+        <option value="$PROJECT_DIR$/item/panoramicRoaming/panoramicRoaming.html" />
+>>>>>>> master
       </list>
     </option>
   </component>
@@ -391,18 +415,29 @@
       <option name="presentableId" value="Default" />
       <updated>1472794148420</updated>
       <workItem from="1472794149667" duration="5458000" />
+<<<<<<< HEAD
       <workItem from="1472809485151" duration="243000" />
       <workItem from="1472810124296" duration="2000" />
       <workItem from="1473053466195" duration="12824000" />
       <workItem from="1473124440403" duration="5887000" />
+=======
+      <workItem from="1472809485151" duration="525000" />
+>>>>>>> master
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="24414000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2" y="17" width="1936" height="1056" extended-state="1" />
+=======
+    <option name="totallyTimeSpent" value="5983000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="80" y="0" width="1936" height="1100" extended-state="0" />
+>>>>>>> master
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24973656" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -492,10 +527,16 @@
         <state relative-caret-position="456">
           <caret line="19" column="30" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="30" />
           <folding>
+<<<<<<< HEAD
             <element signature="n#!!block;n#loadPredefinedPanorama#0" expanded="false" />
             <element signature="e#1060#1538#0" expanded="false" />
             <element signature="n#!!block;n#upload#0" expanded="false" />
             <element signature="n#!!block;n#dragMouse#0" expanded="false" />
+=======
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+>>>>>>> master
           </folding>
         </state>
       </provider>
@@ -614,6 +655,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/item/item1/js_item2/item1.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
@@ -651,6 +693,8 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> master
     <entry file="file://$PROJECT_DIR$/js/create.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1800">
@@ -692,12 +736,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="552">
           <caret line="38" column="62" selection-start-line="38" selection-start-column="4" selection-end-line="38" selection-end-column="62" />
+=======
+        <state relative-caret-position="984">
+          <caret line="116" column="20" selection-start-line="116" selection-start-column="20" selection-end-line="116" selection-end-column="20" />
+>>>>>>> master
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/item/item1/css_item1/item1.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="648">
@@ -734,6 +784,16 @@
             <element signature="e#1060#1538#0" expanded="false" />
             <element signature="n#!!block;n#upload#0" expanded="false" />
             <element signature="n#!!block;n#dragMouse#0" expanded="false" />
+=======
+    <entry file="file://$PROJECT_DIR$/item/panoramicRoaming/panoramicRoaming.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="49" column="47" selection-start-line="49" selection-start-column="47" selection-end-line="49" selection-end-column="47" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+>>>>>>> master
           </folding>
         </state>
       </provider>
