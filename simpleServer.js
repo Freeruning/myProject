@@ -9,7 +9,7 @@ var view = function (response)
     response.writeHead(200,{"Content-Type":"text/html"});
     response.write("webService response");
     response.end();
-}
+};
 
 //handle 作为一个路径和函数的配对
 var handle = {};

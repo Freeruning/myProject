@@ -48,8 +48,8 @@ $(function () {
         }
     });
     // //右侧导航点击跳到按钮
-    // var mainWidth = parseFloat($("#main").css("width"));
-    // var bodyWidth = parseFloat($("body").css("width"));
+    // var mainWidth = parseFloat($("#main").css_item1("width"));
+    // var bodyWidth = parseFloat($("body").css_item1("width"));
     // var moveSpeed =  (mainWidth - bodyWidth) / 60;
     // var moveTime=1;
     //
@@ -219,11 +219,11 @@ function onLoad() {
 // //获取需要移动的位置
 // function getMoveDistance(ele,popLeft) {
 //     var main = $("#main");
-//     var bgLeft = parseFloat(main.css("left"));
-//     var widthHalf = parseFloat(main.css("width")) / 2;
-//     var bodyWidth = parseFloat($("body").css("width"));
-//     if(!popLeft) popLeft = parseFloat(ele.css("left"));
-//     var popWidthHalf = parseFloat(ele.css("width")) / 2;
+//     var bgLeft = parseFloat(main.css_item1("left"));
+//     var widthHalf = parseFloat(main.css_item1("width")) / 2;
+//     var bodyWidth = parseFloat($("body").css_item1("width"));
+//     if(!popLeft) popLeft = parseFloat(ele.css_item1("left"));
+//     var popWidthHalf = parseFloat(ele.css_item1("width")) / 2;
 //     var move = widthHalf - popWidthHalf - popLeft + bgLeft;
 //     if(move <= bodyWidth - widthHalf){
 //         moveDistance[ele.attr("data-src")] = bodyWidth - widthHalf;
