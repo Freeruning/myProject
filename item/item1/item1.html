@@ -11,16 +11,21 @@
 	<script src="../../lib/webgl/three.min.js"></script>
 	<script src="../../lib/webgl/photo-sphere-viewer.min.js"></script>
 	<script src="../../lib/jquery.min.js"></script>
+	<style>
+		body{background:url("mohu.jpg") no-repeat center/cover ;}
+		header{top: -200px;}
+		.all{top: 10px;}
+	</style>
 </head>
 <body >
 	<header >
 		<ul class="img-list" id="imgList">
-			<li><img class="img-control active" src="list/list_1.jpg" data-src="img1"></li>
-			<li><img class="img-control" src="list/list_2.jpg" data-src="img2"></li>
-			<li><img class="img-control" src="list/list_3.jpg" data-src="img3"></li>
-			<li><img class="img-control" src="list/list_4.jpg" data-src="img4"></li>
-			<li><img class="img-control" src="list/list_5.jpg" data-src="img5"></li>
-			<li><img class="img-control" src="list/list_6.jpg" data-src="img6"></li>
+			<li><img class="img-control active" src="list_item1/list_1.jpg" data-src="img1"></li>
+			<li><img class="img-control" src="list_item1/list_2.jpg" data-src="img2"></li>
+			<li><img class="img-control" src="list_item1/list_3.jpg" data-src="img3"></li>
+			<li><img class="img-control" src="list_item1/list_4.jpg" data-src="img4"></li>
+			<li><img class="img-control" src="list_item1/list_5.jpg" data-src="img5"></li>
+			<li><img class="img-control" src="list_item1/list_6.jpg" data-src="img6"></li>
 			<li class="li-upload">
 				<p id="upload"><span>上传全景图</span></p>
 				<form  method="get" action="item1.html" style="display: none;">
@@ -32,7 +37,7 @@
 		<span class="list-control list-control-r"  data-name="right"></span>
 	</header>
 	<div class="all">
-		<img src="img/all.png">
+		<img src="../public_img/all.png">
 		<p>场景选择</p>
 	</div>
 	<div id="container"></div>

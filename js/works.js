@@ -67,7 +67,7 @@ $(document).ready(function(){
     //     }
     // });
     // ///////////////////jobs//////////////////////
-    // $('.list-group a').click(function(e){
+    // $('.list_item2-group a').click(function(e){
     //     e.preventDefault();
     //     var $this = $(this);
     //     var change = $this.find('>div').css_item1('display');

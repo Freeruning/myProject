@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="zhouxuan">
+    <title>Three.js 模型展示 切换</title>
+    <link rel="icon" type="image/png" href="../../images/user_logo.ico">
+    <link rel="stylesheet" href="../item1/css_item1/item1.css" />
+    <script src="../../lib/webgl/three.js"></script>
+    <script src="../../lib/webgl/OBJLoader.js"></script>
+    <script src="../../lib/webgl/OrbitControls.js"></script>
+    <script src="../../lib/jquery.min.js"></script>
+    <script src="../../js/ModelShow.js"></script>
+<style>
+    body{background:url("model_bg.jpg") center;}
+    header{bottom: -200px;}
+    .all{bottom: 10px;}
+</style>
+</head>
+<body>
+<header>
+    <ul class="img-list" id="imgList">
+        <li><img class="img-control active" src="list_item2/list1.jpg" data-src="file1"></li>
+        <li><img class="img-control" src="list_item2/list2.jpg" data-src="file2"></li>
+        <li><img class="img-control" src="list_item2/list3.jpg" data-src="file3"></li>
+        <li><img class="img-control" src="list_item2/list4.jpg" data-src="file4"></li>
+        <li><img class="img-control" src="list_item2/list5.jpg" data-src="file5"></li>
+        <li><img class="img-control" src="list_item2/list6.jpg" data-src="file6"></li>
+        <li class="li-upload"><p id="upload"><span>上传模型</span></p></li>
+    </ul>
+    <span class="list-control list-control-l"  data-name="left"></span>
+    <span class="list-control list-control-r"  data-name="right"></span>
+</header>
+<div class="all">
+    <img src="../public_img/all.png">
+    <p>模型选择</p>
+</div>
+<!--start --上传弹出框-->
+<div class="modal" id="uploadModel">
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">×</span>
+            <h4 class="modal-title">上传模型</h4>
+        </div>
+        <div class="modal-body">
+            <form  method="get" action="item2.html" style="display: none;">
+                <input type="file" multiple name="pano" id="pano" />
+            </form>
+            <p><label>模型文件:</label><input type="text" name="obj" disabled placeholder="请上传.obj的文件"><span id="upObj" class="btn-get">获取</span></p>
+            <p><label>贴图文件:</label><input type="text" name="jpg" disabled placeholder="请上传.jpg的文件"><span id="upJpg" class="btn-get">获取</span></p>
+        </div>
+        <div class="modal-footer">
+            <div id="submit" class="btn">确 认</div>
+        </div>
+    </div>
+</div>
+<!-- end -->
+<script src="js_item2/item2.js"></script>
+</body>
+
+</html>

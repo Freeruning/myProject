@@ -8,9 +8,9 @@ var fullImg = {
 };
 var FULL,prevImg;
 window.onload = function() {
-	FULL = loadPredefinedPanorama();
+	loadPredefinedPanorama();
 
-	dragMouse("imgList","list-control");
+	dragMouse("imgList","list_item2-control");
 
 	var allImg = $(".img-control");
 	prevImg = allImg.filter(".active");
@@ -52,9 +52,8 @@ function loadPredefinedPanorama() {
 
 	// Panorama display
 	var div = document.getElementById('container');
-	div.style.height = '30px';
 
-	PSV = new PhotoSphereViewer({
+	FULL = new PhotoSphereViewer({
 		// Path to the panorama
 		panorama: fullImg.img1,
 
@@ -76,7 +75,6 @@ function loadPredefinedPanorama() {
 		// HTML loader
 		loading_html: loader
 	});
-	return PSV;
 }
 
 // Load a panorama stored on the user's computer
@@ -118,12 +116,15 @@ function dragMouse(id,con) {
 		e.preventDefault();
 		start = e.pageX;
 		left_1 = parseFloat( $(main).css("left"));
+		window.addEventListener("mouseup",onMouseUP);
 		window.addEventListener("mousemove",onMouseMove);
+
 	}
 
 	function onMouseMove(e) {
 
 		e.preventDefault();
+		window.addEventListener("mouseup",onMouseUP);
 		var tx = e.pageX - start+left_1;
 		if(Math.abs(tx) < (mainWidthHalf/8 )){
 			flag = false;
@@ -136,7 +137,7 @@ function dragMouse(id,con) {
 		}else {
 			distance = "200px";
 		}
-		window.addEventListener("mouseup",onMouseUP);
+
 	}
 
 
