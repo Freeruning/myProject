@@ -60,10 +60,12 @@ function loadPredefinedPanorama() {
 		// Container
 		container: div,
 
-		// Deactivate the animation
-		time_anim: false,
+		// 3秒后自转
+		time_anim: 3000,
+		//转动的速度
+		anim_speed:"1rpm",
 
-		// Display the navigation bar
+		// 是否显示导航条
 		navbar: true,
 
 		// Resize the panorama
@@ -71,7 +73,7 @@ function loadPredefinedPanorama() {
 			width: '100%',
 			height: '100%'
 		},
-
+		
 		// HTML loader
 		loading_html: loader
 	});
