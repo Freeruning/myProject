@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="zhouxuan">
+    <title>Three.js 切换场景和模型</title>
+    <link rel="icon" type="image/png" href="../../images/user_logo.ico">
+    <link rel="stylesheet" href="../item1/css_item1/item1.css" />
+    <script src="../../lib/webgl/three.js"></script>
+    <script src="../../lib/webgl/OBJLoader.js"></script>
+    <script src="../../lib/webgl/OrbitControls.js"></script>
+    <script src="../../lib/webgl/DeviceOrientationControls.js"></script>
+    <script src="../../lib/webgl/cardBoardEffect.js"></script>
+    <script src="../../lib/jquery.min.js"></script>
+    <!--<script src="../../js/ModelShow.js"></script>-->
+    <style>
+        html,body{width: 100%;height: 100%;overflow: hidden;}
+        body{background:url("../public/mohu.jpg") no-repeat center/cover ;}
+    </style>
+
+</head>
+<body>
+
+<script src="js_item3/item3.js"></script>
+<script src="js_item3/create.js"></script>
+<!--<script src="js_item3/defaultScene.js"></script>-->
+<script>
+    var fullImg = {
+        img1:"../public/full/full_1.jpg",
+        img2:"../public/full/full_2.jpg",
+        img3:"../public/full/full_3.jpg",
+        img4:"../public/full/full_4.jpg",
+        img5:"../public/full/full_5.jpg",
+        img6:"../public/full/full_6.jpg"
+    };
+    var modelFile = {
+        file1:["../public/model/obj1.obj","../public/texture/obj1.jpg"],
+        file2:["../public/model/obj2.obj","../public/texture/obj2.jpg"],
+        file3:["../public/model/obj3.obj","../public/texture/obj3.jpg"],
+        file4:["../public/model/obj4.obj","../public/texture/obj4.jpg"],
+        file5:["../public/model/obj5.obj","../public/texture/obj5.jpg"],
+        file6:["../public/model/obj6.obj","../public/texture/obj6.jpg"]
+    };
+    var SS = new SwitchingScene({
+        autoLoad : true,
+        autoRotate : true,
+        vrMode : false,
+        textureBG : fullImg.img1,
+        modelOBJ : modelFile.file1[0],
+        textureOBJ : modelFile.file1[1],
+        switchingMode : true,//允许切换
+        SwitchingBG : fullImg,
+        SwitchingOBJ : modelFile
+    });
+</script>
+</body>
+
+</html>

@@ -1,10 +1,10 @@
 var fullImg = {
-		img1:"full/full_1.jpg",
-		img2:"full/full_2.jpg",
-		img3:"full/full_3.jpg",
-		img4:"full/full_4.jpg",
-		img5:"full/full_5.jpg",
-		img6:"full/full_6.jpg"
+		img1:"../public/full/full_1.jpg",
+		img2:"../public/full/full_2.jpg",
+		img3:"../public/full/full_3.jpg",
+		img4:"../public/full/full_4.jpg",
+		img5:"../public/full/full_5.jpg",
+		img6:"../public/full/full_6.jpg"
 };
 var FULL,prevImg;
 window.onload = function() {

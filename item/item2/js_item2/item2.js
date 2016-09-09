@@ -2,12 +2,12 @@
  * Created by 周轩 on 2016/9/6.
  */
 var modelFile = {
-    file1:["model/file1/obj1.obj","model/file1/obj1.jpg"],
-    file2:["model/file2/obj2.obj","model/file2/obj2.jpg"],
-    file3:["model/file3/obj3.obj","model/file3/obj3.jpg"],
-    file4:["model/file4/obj4.obj","model/file4/obj4.jpg"],
-    file5:["model/file5/obj5.obj","model/file5/obj5.jpg"],
-    file6:["model/file6/obj6.obj","model/file6/obj6.jpg"]
+    file1:["../public/model/obj1.obj","../public/texture/obj1.jpg"],
+    file2:["../public/model/obj2.obj","../public/texture/obj2.jpg"],
+    file3:["../public/model/obj3.obj","../public/texture/obj3.jpg"],
+    file4:["../public/model/obj4.obj","../public/texture/obj4.jpg"],
+    file5:["../public/model/obj5.obj","../public/texture/obj5.jpg"],
+    file6:["../public/model/obj6.obj","../public/texture/obj6.jpg"]
 };
 
 var FULL,prevImg;

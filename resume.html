@@ -1,25 +1,427 @@
 <!DOCTYPE html>
-<html lang="en">
+<html style="overflow: hidden; height: 100%;">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="renderer" content="webkit">
-    <meta name="viewport" content=" initial-scale=1,maximum-scale=1,width=device-width">
-    <title>周轩的个人作品 h5 3d 前端</title>
-    <meta name="author" content="zhouxuan">
-    <link rel="shortcut icon" type="text/css" href="images/user_logo.ico">
-    <link href="css/style.css" rel="stylesheet">
-    <script src="lib/jquery.min.js"></script>
+    <meta name="keywords" content="前端">
+    <meta name="description" content="周轩的web前端工程师个人简历">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jquery.fullPage.css">
+    <link rel="stylesheet" href="css/resume.css">
+    <title>前端工程师简历</title>
+    <style>
+        body{overflow: hidden; height: 100%; font-size: 100%; }
+        .github,.jian,.wx{width: 40px;height: 40px;border-radius: 20px;margin:18px;}
+        .github{background-color: #f2f2f2;}
+        footer{position: absolute;bottom: 0;}
+        footer .connection{margin-bottom: 20px;}
+        footer .connection div{margin-top:15px; }
+        footer .connection div:hover{color:#fff;}
+        .navbar-header .logo{width: 30px;height: 30px;margin: 10px 0 0 15px;border-radius:50%; }
+        .navbar-header .logo:hover{ -webkit-box-shadow:0 0 10px 5px #0CC;  -moz-box-shadow:0 0 10px 5px #0CC; box-shadow:0 0 10px 5px #0CC;  }
+        .animated {  -webkit-animation-fill-mode: none;  animation-fill-mode: forwards;  animation-timing-function:linear;  }
+        .animated.infinite {  -webkit-animation-iteration-count: infinite;  animation-iteration-count: infinite;  }
+        .animated.hinge {  -webkit-animation-duration: 3s;  animation-duration: 3s;  }
+        .rotate {  -webkit-animation-name: rotate;  animation-name: rotate  }
+        @-webkit-keyframes rotate {
+            from { -webkit-transform:rotateZ(0deg); }
+            to { -webkit-transform:rotateZ(360deg); }
+        }
+        @-moz-keyframes rotate {
+            from { -moz-transform:rotateZ(0deg); }
+            to { -moz-transform:rotateZ(360deg); }
+        }
+        @keyframes rotate {
+            from { transform:rotateZ(0deg); }
+            to { transform:rotateZ(360deg); }
+        }
+        .header-p{font-size: 12px;margin:-37px 0 0 70px;text-align: center;cursor:text; }
+        .header-p p{padding: 3px 8px;}
+        .header-p .p1{border-bottom: 1px solid #ccc;}
+        .header-p .p1:before{content: "周轩";}
+        .header-p .p2:before{content: "前端工程";}
+        .header-p:hover .p1:before{content: "Resume";}
+        .header-p:hover .p2:before{content: "个人简历";}
+    </style>
 </head>
-<body style="background-color: #f5f5f5;">
-<div class="title">
-    <div class="dot-img pa">
-        <div class="dot" ></div>
-        <div class="dot1"></div>
-        <div class="dot2"></div>
-        <img src="images/user_logo.jpg" class="animated infinite hinge rotate" >
+<body class="fp-viewing-page5">
+<!-- header navigation -->
+<header style="opacity: 1;">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="index.html">
+                    <img src="images/user_logo.jpg" class="logo animated infinite hinge rotate" >
+                </a>
+                <div class="header-p">
+                    <p class="p1"></p>
+                    <p class="p2"></p>
+                </div>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="text-center"><a href="index.html">主页</a></li>
+                    <li class="text-center active"><a href="resume.html">我的简历</a></li>
+                    <li class="text-center"><a href="works.html">项目作品</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<!-- header navigation end -->
+
+<!-- 侧边导航 -->
+<ul class="side">
+    <li class="selected">
+        <a href="#page1"><span></span></a>
+        <div class="fp-tooltip right">首页</div>
+    </li>
+    <li>
+        <a href="#page2"><span></span></a>
+        <div class="fp-tooltip right">关于我</div>
+    </li>
+    <li>
+        <a href="#page3"><span></span></a>
+        <div class="fp-tooltip right">心路历程</div>
+    </li>
+    <li>
+        <a href="#page4" ><span></span></a>
+        <div class="fp-tooltip right">专业技能</div>
+    </li>
+    <li>
+        <a href="#page5"><span></span></a>
+        <div class="fp-tooltip right">我的作品</div>
+    </li>
+    <li>
+        <a href="#page6"><span></span></a>
+        <div class="fp-tooltip right">联系我</div>
+    </li>
+</ul>
+<!-- aside navigation end -->
+<!-- home page -->
+<div id="dowebok" class="fullpage-wrapper" >
+    <!-- home -->
+    <div class="section one fp-section" data-anchor="page1" >
+        <div id="home" class="page home_zoom" >
+            <div id="home_content" class="page-content" >
+                <div id="home_head" >
+                    <div id="home_head_content">
+                        <!--<img src="file/resume/photo1.jpg" id="home_photo1" alt="">-->
+                        <!--<img src="file/resume/photo2.jpg" id="home_photo2" alt="">-->
+                    </div>
+                </div>
+                <div id="home_info">
+                    <p id="home_info1" >生活是一种绵延不绝的渴望,渴望不断上升,变得更伟大而高贵。</p>
+                    <div id="home_info_box" >
+                        <p id="home_info2">我叫周轩</p>
+                        <p id="home_info3">24岁</p>
+                        <p id="home_info4">一名前端研发工程师</p>
+                        <p id="home_info5">zhouxuanoo@icloud.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    <!-- home end -->
+    <!-- about -->
+    <div class="section two fp-section" data-anchor="page2" >
+        <div id="about" class="page">
+            <div id="about_content" class="page-content"  >
+                <div class="title">
+                    <h1>关于我</h1>
+                    <div class='title_en'>
+                        <h2>· About me ·</h2>
+                    </div>
+                </div>
+                <div id="about_list_content">
+                    <div class="about_list" id="about_list1">
+                        <div class="about_list_eg" id="about_en_edu"></div>
+                        <div class="about_list_cn" id="about_cn_edu">学历<p>本科</p></div>
+                    </div>
+                    <div class="about_list">
+                        <div class="about_list_eg" id="about_en_age"></div>
+                        <div class="about_list_cn" id="about_cn_age">年龄<p>24</p></div>
+                    </div>
+                    <div class="about_list">
+                        <div class="about_list_eg" id="about_en_loc"></div>
+                        <div class="about_list_cn" id="about_cn_loc">地点<p>背景</p></div>
+                    </div>
+                    <div class="about_list">
+                        <div class="about_list_eg" id="about_en_sta"></div>
+                        <div class="about_list_cn" id="about_cn_sta">状态<p>在职</p></div>
+                    </div>
+                </div>
+                <div id="about_info"></div>
+            </div>
+        </div>
+    </div>
+    <!-- about end -->
+    <!-- skill -->
+    <div class="section three fp-section" data-anchor="page3" >
+        <div id="skill" class="page">
+            <div id="skill_content" class="page-content">
+                <div class="title">
+                    <h1>专业技能</h1>
+                    <div class='title_en'>
+                        <h2>· Skill ·</h2>
+                    </div>
+                </div>
+                <div id="skill_info">
+                </div>
+                <div id="skill_list">
+                    <div class="skill_list_content skill_scale" id="skill_list1">
+                        <div class="skill_icon" id="skill_icon1"></div>
+                        <div class="skill_name">Three.js</div>
+                        <div class="skill_flag"></div>
+                        <div class="skill_int" id="skill_int1"></div>
+                    </div>
+                    <div class="skill_list_content skill_scale" id="skill_list2">
+                        <div class="skill_icon" id="skill_icon2"></div>
+                        <div class="skill_name">HTML</div>
+                        <div class="skill_flag"></div>
+                        <div class="skill_int" id="skill_int2"></div>
+                    </div>
+                    <div class="skill_list_content skill_scale" id="skill_list3">
+                        <div class="skill_icon" id="skill_icon3"></div>
+                        <div class="skill_name">CSS</div>
+                        <div class="skill_flag"></div>
+                        <div class="skill_int" id="skill_int3"></div>
+                    </div>
+                    <div class="skill_list_content skill_scale" id="skill_list4">
+                        <div class="skill_icon" id="skill_icon4"></div>
+                        <div class="skill_name">JavaScript</div>
+                        <div class="skill_flag"></div>
+                        <div class="skill_int" id="skill_int4"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- skill end -->
+    <!-- experience -->
+    <div class="section four fp-section" data-anchor="page4">
+        <div id="exp" class="page">
+            <div id="exp_content" class="page-content">
+                <div class="title">
+                    <h1>我的经历</h1>
+                    <div class='title_en'>
+                        <h2>· Experience ·</h2>
+                    </div>
+                </div>
+                <div id="exp_info" class="exp_scale"></div>
+                <div id="exp_list_slider" style="width: 1000px;">
+                    <div id="exp_list_slider_content" class="exp_scale">
+                        <div id="exp_list_content" style="width: 3000px;">
+                            <div class="exp_list">
+                                <div class="exp_list_left">
+                                    <div id="exp_list_left1">
+                                        <dl>
+                                            <dt>壹零陆文化传播有限责任公司</dt>
+                                            <dd class="exp_list_time">2014年3月~2014年9月</dd>
+                                            <dd>网络部（实习）</dd>
+                                            <dd>负责网站后台维护，微博、微信等新媒体创意撰写，营销和推广</dd>
+                                            <dd>负责百度PPC后台调整</dd>
+                                            <dd>获得<a href="http://www.flqin.com/#" class="md-trigger" data-modal="modal-1">最佳新人奖</a></dd>
+                                            <dd>同期工作之余开始<a href="http://www.flqin.com/#" class="md-trigger" data-modal="modal-2">系统性的自学web前端各项技术</a></dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="exp_list">
+                                <div class="exp_list_left">
+                                    <div id="exp_list_left2">
+                                        <dl>
+                                            <dt>四川卓煌企业管理有限公司</dt>
+                                            <dd class="exp_list_time">2014年9月~2015年7月</dd>
+                                            <dd>管理部</dd>
+                                            <dd>负责网站后台维护及几个企业公司的官网开发</dd>
+                                            <dd>负责百度竞价操作及seo优化</dd>
+                                            <dd>同期工作之余提升自己原生JS的编码能力</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="exp_list">
+                                <div class="exp_list_left">
+                                    <div id="exp_list_left3">
+                                        <dl>
+                                            <dt>成都兰途网络科技有限公司</dt>
+                                            <dd class="exp_list_time">2015年7月~现在</dd>
+                                            <dd>前端技术部</dd>
+                                            <dd>负责快速构建高质量移动app页面</dd>
+                                            <dd>用less预编译css，gulp进行自动化构建</dd>
+                                            <dd>使用原生JS+angularJS进行前端开发</dd>
+                                            <dd>使用git svn进行版本控制，Phonegap/Cordova进行app打包</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="exp_list_to" >
+                            <div id="exp_list_toleft"><img src="images/resume/exp_list_toleft.png"></div>
+                            <div id="exp_list_toright"><img src="images/resume/exp_list_toright.png"></div>
+                        </div>
+                    </div>
+                    <div id="exp_timeline" class="exp_scale">
+                        <div>
+                            <a href="##" data-title="2014年12月~2016年4月"></a>
+                            <a href="##" data-title="2016年4月~现在"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- experience end -->
+    <!-- demo -->
+    <div class="section five fp-section" data-anchor="page5">
+        <div id="demo" class="page">
+            <div id="demo_content" class="page-content">
+                <div class="title">
+                    <h1>我的作品</h1>
+                    <div class="title_en" >
+                        <h2>· Demo ·</h2>
+                    </div>
+                </div>
+                <div id="demo_content_list">
+                    <ul class="demo_box">
+                        <li class="demo_scale">
+                            <div class="demo_box_content">
+                                <div class="demo_box_hover">
+                                    <p class="demo_box_title">亚马逊峰会</p>
+                                    <span class="demo_box_hover_icon">
+                                        <a href="http://www.awssummit.cn/H5/3D_AWS/3d.html" target="_blank" class="demo_box_link">
+                                            <img src="images/resume/demo-link.png" alt="">
+                                        </a>
+                                    </span>
+                                </div>
+                                <img src="img/thumb/aws.jpg" alt="" class="demo_box_bg">
+                            </div>
+                        </li>
+                        <li class="demo_scale">
+                            <div class="demo_box_content">
+                                <div class="demo_box_hover">
+                                    <p class="demo_box_title">全景展示</p>
+									<span class="demo_box_hover_icon">
+										<a href="item/item1/item1.html" target="_blank" class="demo_box_link">
+											<img src="images/resume/demo-link.png" alt="">
+										</a>
+									</span>
+                                </div>
+                                <img src="img/thumb/img_full.jpg" alt="" class="demo_box_bg">
+                            </div>
+                        </li>
+                        <li class="demo_scale">
+                            <div class="demo_box_content">
+                                <div class="demo_box_hover">
+                                    <p class="demo_box_title">模型切换展示</p>
+                                    <span class="demo_box_hover_icon">
+                                    	<a href="item/item2/item2.html" target="_blank" class="demo_box_link">
+											<img src="images/resume/demo-link.png" alt="">
+                                        </a>
+                                    </span>
+                                </div>
+                                <img src="img/thumb/model_full.jpg" alt="" class="demo_box_bg">
+                            </div>
+                        </li>
+                        <li class="demo_scale">
+                            <div class="demo_box_content">
+                                <div class="demo_box_hover">
+                                    <p class="demo_box_title">你特现实vr平台</p>
+                                    <span class="demo_box_hover_icon">
+                                    	<a href="http://www.nitter.cn/" target="_blank" class="demo_box_link">
+											<img src="images/resume/demo-link.png" alt="">
+                                        </a>
+                                    </span>
+                                </div>
+                                <img src="img/thumb/nitter.jpg" alt="" class="demo_box_bg">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div id="demo_info" class="demo_scale">
+                    <p>这是我的部分demo。</p>
+                    <p>更多demo请移步<a href="works.html" class="md-trigger" data-modal="modal-3">这里</a>。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- demo end -->
+    <!-- contact -->
+    <div class="section six fp-section" data-anchor="page6">
+        <div id="contact" class="page">
+            <div id="contact_content" class="page-content">
+                <div class="title">
+                    <h1>联系我</h1>
+                    <div class='title_en'><h2>· Contact me ·</h2></div>
+                </div>
+                <div id="contact_head">
+                    <div id="contact_head1">灵感 代码 梦想 未来</div>
+                    <div id="contact_head2">
+                        <span class="fade_in">inspiration</span>
+                        <span class="fade_in">code</span>
+                        <span class="fade_in">dream</span>
+                        <span class="fade_in">future</span>
+                    </div>
+                </div>
+                <div id="contact_info" class="contact_scale fade_in">
+                    <ul><li>学习是一个充实愉悦的过程</li><li>前端更贴近用户，这种体验非常美妙</li><li>热爱FE.D，也热爱一切美好的事物</li><li>行路有良友，便是捷径</li><li>带上我吧，一起看到更大的世界</li></ul>
+                </div>
+                <div id="contact_way">
+                    <div id="contact_message1" class="contact_message contact_scale fade_in" style="display: none;">follow me</div>
+                    <div id="contact_form" style="display: block;">
+                        梦想成为前端工程师？<br>
+                        前端自学迷茫？<br>
+                        前端面试会问什么？<br>
+                        想学习该简历怎么制作？<br><br>
+                        QQ小群：<a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=959d5b7e9bab932c87cdd68372cfefd772293deaeceaba3e015ba35463200fe5">Fe.d小分队</a><br><br>
+                        互相学习交流，共同进步O(∩_∩)O~
+                    </div>
+                    <div id="contact_message2" class="contact_message">谢谢</div>
+                </div>
+            </div>
+            <footer>
+                <div class="container">
+                    <div class="row text-center">
+                        <a href="https://github.com/Freeruning/myProject"><img class="github" src="img/github.png" alt="我的github" title="我的github"></a>
+                        <a href="http://www.jianshu.com/users/81b5abab2ca5/latest_articles"><img class="jian" src="img/jian.png" alt="我的简书" title="我的简书"></a>
+                        <div class="rel" style="display: inline-block;">
+                            <a href="javascript:void(0);">
+                                <img class="wx" src="img/weixin.png" alt="我的微信" title="我的微信">
+                                <div class="tip">
+                                    <img src="images/weixin_code.jpg">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row text-center connection">
+                        <div class="col-md-2 col-md-offset-2">电话：15695652130</div>
+                        <div class="col-lg-4 col-md-4">地址：北京市朝阳区</div>
+                        <div class="col-lg-3 col-md-3">邮箱：zhouxuanoo@icloud.com</div>
+                    </div>
+                </div>
+                <div class="footer-copyright">
+                    <span>©2016 </span><a href="##">BY: ZHOUXUAN</a><span class="hidden-xs">请联系我！</span>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <!-- contact end -->
 </div>
-<h1 style="width: 100%;text-align: center;font-size: 30px;color: #333;margin-top: 100px;">编写中，敬请期待</div>
-</body>
-</html>
+<!-- home page end -->
+
+
+<script src="lib/jquery.min.js"></script>
+<script src="lib/bootstrap.min.js"></script>
+<script src="lib/jquery.easing.min.js"></script>
+<script src="lib/jquery.fullPage.min.js"></script>
+<script src="lib/cssParser.js"></script>
+<script src="js/resume.js"></script>
+
+</body></html>
