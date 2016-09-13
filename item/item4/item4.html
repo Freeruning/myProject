@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="zhouxuan">
+	<title>全景图随意替换换字</title>
+	<script src="../../lib/webgl/three.min.js"></script>
+	<script src="../../lib/webgl/GeometryUtils.js"></script>
+	<script src="../../lib/webgl/OrbitControls.js"></script>
+	<script src="../../lib/jquery.min.js"></script>
+
+	<style>
+		html, body {  width: 100%;  height: 100%; overflow: hidden;background-color: #000;}
+		html, body,div,p,a{margin: 0;padding: 0;  }
+		.position{position: absolute;top: 30px;right:-115px;padding: 5px;width: 100px;background-color: #ffb400;cursor: pointer;box-shadow: 0 0 10px #fff;}
+		.position:hover{color:#333;background-color: #ffcc00;}
+		.change-font{position: fixed;left: -300px;top: 0;bottom: 0;width: 300px;padding-top:50px;background-color: #111;color: #fff;font-size: 16px;text-align: center;z-index: 100;}
+		.change-font p{width: 100%;padding: 15px 0;}
+		.change-font p label{padding-right: 15px;}
+		.change-font p input{width:50%;padding: 5px 8px;}
+		.change-font p input.error{outline: 1px solid red; }
+		.change-font p button{width:50%;margin:0 auto;padding: 6px 0;background-color: #2daebf;color: #fff;font-size: 18px;border: none;cursor: pointer;}
+		.change-font p button:hover{background-color: #238896;}
+		.change-font>p.error{display:none;color: red;padding: 15px 0;}
+		.fixed-mask{position: fixed;top: 0;left:0;bottom: 0;right:0;background-color: #000;z-index:1000;}
+		.loading{background:#000 url("../../images/loading.gif") center center/400px 300px no-repeat;color: #fff;font-size: 15px;}
+		.middle{position: absolute;top: 50%;left:50%;  -webkit-transform: translate(-50%,-50%);  -moz-transform: translate(-50%,-50%);  transform: translate(-50%,-50%);}
+		.remind{padding-top: 200px;}
+		.remind a{padding: 0 5px;color: #ccc;font-weight: 600;font-size: 16px;}
+		.remind a:hover{color: #ffcc00;}
+	</style>
+</head>
+<body >
+<!--loading-->
+<div class="loading fixed-mask" id="loading">
+	<p class="middle">loading...</p>
+	<p class="middle remind">由于字体库比较大，所以会等待一段时间，也可以直接<a href="http://pan.baidu.com/s/1c1TkzZU" target="_blank">下载</a>后使用</p>
+</div>
+<div class="change-font">
+	<div class="position" id="position">替换文字</div>
+	<p><label>1窗口:</label><input type="text" placeholder="填写汉字" value="社保局"></p>
+	<p><label>2窗口:</label><input type="text" placeholder="填写汉字" value="工商局"></p>
+	<p><label>3窗口:</label><input type="text" placeholder="填写汉字" value="北京局" ></p>
+	<p><label>4窗口:</label><input type="text" placeholder="填写汉字" value="南京局" ></p>
+	<p><label>5窗口:</label><input type="text" placeholder="填写汉字" value="警察局"></p>
+	<p><button id="changeValue">替&nbsp;&nbsp;换</button></p>
+	<p class="error">所有的文本框不能为空！</p>
+
+</div>
+</body>
+<script src="item4.js"></script>
+<script>
+	$("#position").on("click",function () {
+		var changeFont = $(".change-font");
+		if(parseInt(changeFont.css("left")) == 0){
+			changeFont.animate({left:'-300px'},500);
+		}else{
+			changeFont.animate({left:'0'},500);
+		}
+
+
+		for(var i=0;i<objects.length;i++){
+			console.log(parseInt(objects[i].position.x)+','+parseInt(objects[i].position.y)+','+parseInt(objects[i].position.z));
+		}
+	});
+$("#changeValue").on("click",function () {
+	$(".change-font").find("input").each(function (index) {
+		if(this.value) {
+			$(this).removeClass('error');
+			text["text"+(index+1)] = this.value;
+		}else{
+			$(this).addClass('error');
+		}
+
+	});
+
+	refreshText();
+});
+</script>
+</html>

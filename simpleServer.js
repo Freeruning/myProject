@@ -44,7 +44,7 @@ function start(route,handle)
 
     }
 
-    http.createServer(onRequest).listen(8765);
+    http.createServer(onRequest).listen(8766);
     console.log("Server has started.")
 }
 
@@ -82,12 +82,6 @@ function route(handle,pathname,theQuery,response,postData)
 
     }
 }
-
-
-
-
-
-
 
 
 

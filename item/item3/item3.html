@@ -14,19 +14,35 @@
     <script src="../../lib/webgl/DeviceOrientationControls.js"></script>
     <script src="../../lib/webgl/cardBoardEffect.js"></script>
     <script src="../../lib/jquery.min.js"></script>
-    <!--<script src="../../js/ModelShow.js"></script>-->
     <style>
         html,body{width: 100%;height: 100%;overflow: hidden;}
+        html, body,div,p,a,img{margin: 0;padding: 0;  }
         body{background:url("../public/mohu.jpg") no-repeat center/cover ;}
+        .full-mask{position: absolute;top: 0;left:0;bottom: 0;right:0;background-color: rgba(0,0,0,0.8);z-index: 1000}
+        .full-mask p{width: 100%;text-align: center;position: absolute;top: 30%;font-size: 16px;color: #fff;padding: 10px 0;}
+        .full-mask p img{width: 120px;margin-top: 15px;}
+        @media screen and (min-width:0px)  and (max-width: 600px){
+            .full-mask{display: none;}
+        }
     </style>
 
 </head>
 <body>
-
+<div class="full-mask">
+    <p>pc操作方法：按住鼠标左键，移动场景，使中心红点移动到模型上，
+        <br />
+        <br />
+        手机操作方法，旋转手机使中心红点移动到模型上，<br />
+        <br />
+        5秒后切换场景和模型。<br />
+        <img src="../../images/item3_code.png" title="扫描二维码">
+    </p>
+</div>
 <script src="js_item3/item3.js"></script>
-<script src="js_item3/create.js"></script>
-<!--<script src="js_item3/defaultScene.js"></script>-->
 <script>
+    $(".full-mask").on("click touchend",function () {
+        $(this).fadeOut(300);
+    });
     var fullImg = {
         img1:"../public/full/full_1.jpg",
         img2:"../public/full/full_2.jpg",

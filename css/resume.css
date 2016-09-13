@@ -31,7 +31,7 @@ h3{margin:20px auto;text-align:center}
 .side li.selected span, .side li.selected:hover span{ height: 12px; width:12px;  margin: -6px 0 0 -6px;  box-shadow: 0 0 5px #fff;  }
 
 .section .page{width:100%;height:100%;position:relative;overflow:hidden;background:url(../images/home-bg.jpg) center;}
-.section .page .page-content{margin:0 auto;width:100%;max-width:1000px;height:auto}
+.section .page .page-content{margin:0 auto;width:100%;max-width:1000px;height:auto;padding-top: 100px;}
 @-webkit-keyframes zoom{0%{background-size:50% 50%}
     100%{background-size:30% 30%}
 }
@@ -41,7 +41,7 @@ h3{margin:20px auto;text-align:center}
 .home_zoom{-webkit-animation:zoom 2s ease-in-out;animation:zoom 2s ease-in-out}
 #home_head{margin:300px auto 30px;width:200px;-webkit-transition:margin-top 2s ease-in-out;transition:margin-top 2s ease-in-out}
 #home_head_content{margin:0 auto;position:relative;width:153px;height:153px;cursor:pointer}
-#home_head img{width:150px;height:150px;border:2px #CCC solid;border-radius:75px;position:absolute;-webkit-transition:box-shadow 2s;transition:box-shadow 2s}
+#home_head img{width:150px;height:150px;border:2px #CCC solid;border-radius:75px;position:absolute;}
 #home_head img:hover{box-shadow:0 0 10px red;}
 img#home_photo2{opacity:0;z-index:99;}
 #home_info_box{border-top:2px solid #ccc;width:0;margin:15px auto;}
@@ -136,9 +136,10 @@ img#home_photo2{opacity:0;z-index:99;}
 .exp_list dd:before{position:absolute;left:-15px;top:13px;content:"";width:4px;height:4px;background:#000;border-radius:50%}
 .exp_list_time{font-size:12px!important;margin-top:-20px;color:#333}
 .exp_list_time:before{position:static!important}
-#exp_timeline{text-indent:-9999px;margin:10px auto;width:800px;background:url(../images/resume/timeline.png) no-repeat center center}
-#exp_timeline div{width:390px;height:50px;margin:0 auto}
-#exp_timeline a{display:block;float:left;text-align:center;margin:10px 50px;width:30px;height:30px;cursor:pointer}
+#exp_timeline{text-indent:-9999px;margin:10px auto;width:100%;background:url(../images/resume/timeline.png) no-repeat center center}
+#exp_timeline div{width:300px;height:50px;margin:0 auto}
+#exp_timeline a{display:block;float:left;text-align:center;margin:5px 0 5px 66px;width:35px;height:35px;cursor:pointer}
+#exp_timeline div a:nth-child(2){margin-left: 96px;}
 .exp_timeline_title{position:absolute;background:#000;border:1px solid #333;line-height:20px;padding:0 5px;display:none}
 .exp_scale,.demo_scale{visibility:hidden}
 .md-content img{display:block;margin:0 auto 10px;max-width:550px}
@@ -169,10 +170,11 @@ img#home_photo2{opacity:0;z-index:99;}
 #demo_info p{width:800px;margin:0 auto;text-align:center;line-height:30px}
 #demo_info p a{font-weight:700}
 #demo_info p a:hover{color:red}
-#contact_head{margin:40px auto 20px;width:1000px;visibility:hidden}
+#contact_head{margin:40px auto 20px;width:1000px;}
 #contact_head1,#contact_head2{text-align:center}
 #contact_head1{font-size:24px}
-#contact_head2{font-size:30px;text-transform:uppercase}
+#contact_head2{font-size:30px;text-transform:uppercase;}
+#contact_head2 span{display: block;margin-top: 15px;}
 #contact_head2 span:nth-child(1){color:red}
 #contact_head2 span:nth-child(2){color:#3cf}
 #contact_head2 span:nth-child(3){color:#6c0}

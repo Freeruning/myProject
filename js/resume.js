@@ -92,11 +92,9 @@
 				addAnimateClass($(".demo_scale"),"b_to_t",200);
 			}
 			if(index==6){
-				addAnimateClass($("#contact_head2 span"),"fade_in",200);
+				addAnimateClass($("#contact_head2 span"),"b_to_t",200);
 				$("#contact_head1").addClass("b_to_t");
-				setTimeout(function(){
-					addAnimateClass($(".contact_scale"),"fade_in",350);
-				},100);
+				
 			}
 		},
 		onLeave:function(index){
@@ -106,7 +104,7 @@
 				$("#home_info_box").css("width","0");
 			}
 			if(index ==2 ) {
-				$("#about_info").css("width","0").find("p").css("bottom","-300px");
+				$("#about_info").css("width","0").find("p").stop().css("bottom","-300px");
 			}
 			$(".skill_list_content").removeClass("skill_scale");
 			$(".b_to_t").removeClass("b_to_t");
