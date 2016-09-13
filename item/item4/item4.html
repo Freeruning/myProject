@@ -6,10 +6,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="author" content="zhouxuan">
 	<title>全景图随意替换换字</title>
-	<script src="../../lib/webgl/three.min.js"></script>
-	<script src="../../lib/webgl/GeometryUtils.js"></script>
-	<script src="../../lib/webgl/OrbitControls.js"></script>
-	<script src="../../lib/jquery.min.js"></script>
 
 	<style>
 		html, body {  width: 100%;  height: 100%; overflow: hidden;background-color: #000;}
@@ -49,7 +45,11 @@
 	<p class="error">所有的文本框不能为空！</p>
 
 </div>
-</body>
+
+<script src="../../lib/webgl/three.min.js"></script>
+<script src="../../lib/webgl/GeometryUtils.js"></script>
+<script src="../../lib/webgl/OrbitControls.js"></script>
+<script src="../../lib/jquery.min.js"></script>
 <script src="item4.js"></script>
 <script>
 	$("#position").on("click",function () {
@@ -79,4 +79,5 @@ $("#changeValue").on("click",function () {
 	refreshText();
 });
 </script>
+</body>
 </html>

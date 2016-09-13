@@ -96,7 +96,7 @@
         camera.rotation.y = -Math.PI/2;
 
         SphereImg(backgroundImg,loadFont);
-        document.getElementById("loading").style.display = "none";
+
         if(isDrag){
             renderer.domElement.addEventListener( 'mousemove', onDocumentMouseMove, false );
             renderer.domElement.addEventListener( 'mousedown', onDocumentMouseDown, false );
@@ -151,7 +151,7 @@
         loader.load( 'font/FZDaHei-B02S_Regular.typeface.json', function ( response ) {
             font = response;
             refreshText();
-
+            document.getElementById("loading").style.display = "none";
         } );
 
     }
