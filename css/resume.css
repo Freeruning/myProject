@@ -30,7 +30,7 @@ h3{margin:20px auto;text-align:center}
 .side li:hover span{width:10px;height:10px;margin: -5px 0 0 -5px;}
 .side li.selected span, .side li.selected:hover span{ height: 12px; width:12px;  margin: -6px 0 0 -6px;  box-shadow: 0 0 5px #fff;  }
 
-.section .page{width:100%;height:100%;position:relative;overflow:hidden;background:url(../images/home-bg.jpg) center;}
+.section .page{width:100%;height:100%;position:relative;overflow:hidden;background:url(../images/work-bg.jpg) center;}
 .section .page .page-content{margin:0 auto;width:100%;max-width:1000px;height:auto;padding-top: 100px;}
 @-webkit-keyframes zoom{0%{background-size:50% 50%}
     100%{background-size:30% 30%}
