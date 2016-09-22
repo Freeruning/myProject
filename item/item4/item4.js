@@ -2,7 +2,7 @@
 
     //region 全局开关
     var autoRotate = false;
-    var isDrag = false;
+    var isDrag = true;
     //endregion
     
     //创建一个新的场景
@@ -148,7 +148,7 @@
 
     function loadFont() {
         var loader = new THREE.FontLoader();
-        loader.load( 'font/FZDaHei-B02S_Regular.typeface.json', function ( response ) {
+        loader.load( '../../font/FZDaHei-B02S_Regular.typeface.json', function ( response ) {
             font = response;
             refreshText();
             document.getElementById("loading").style.display = "none";
