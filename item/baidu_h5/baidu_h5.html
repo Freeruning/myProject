@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SHOCKING TIME 遇见智能新世界</title>
+    <meta name="viewport" content="initial-scale=1, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0, width=device-width">
+    <meta itemprop="name" content="SHOCKING TIME 遇见只能新世界"/>
+    <meta itemprop="image" content="image_3d/weixin_logo.jpg" />
+    <meta name="description" itemprop="description" content="让我们一起 SHOCKING TIME 遇见智能新世界" />
+    <!--不缓存-->
+    <!--<meta http-equiv="pragma" content="no-cache">-->
+    <!--<meta http-equiv="Cache-Control" content="no-cache, must-revalidate">-->
+    <!--<meta http-equiv="expires" content="0">-->
+    <link href="baidu_h5.css" rel="stylesheet">
+
+</head>
+<body>
+<!--微信分享图片-->
+<div style='margin:0 auto;width:0;height:0;overflow:hidden;'>
+    <img src="h5_img/weixin_logo.jpg" >
+</div>
+<!--loading 界面-->
+<div id="loading" >
+    <img class="load1" src="h5_img/loading.png">
+    <img class="load2" src="h5_img/loading_1.gif">
+</div>
+<div id="music" class="music"></div>
+<audio id="musicContent" src="baidu_h5.mp3" loop="loop" hidden="hidden"></audio>
+<!--主界面-->
+<div class="main" style="left:0;top: 0;" >
+    <!--内容区-->
+    <div id="main" class="bg">
+        <img id="background" class="threeD" data-name="bg" src="" >
+        <img class="threeD animated hinge_2 infinite scaleout" data-name="bg_1" style="left:339px;top: 458px;" src="" >
+        <img class="threeD animated hinge_3 infinite scaleout" data-name="bg_1" style="left:339px;top: 458px;" src="" >
+        <div class="threeD word" id="word" style="left:540px;top: 250px;">
+            <p id="word1" class="p2"><span class="p_word1">圆周率是多少？</span><span  class="p_word2">3.1415926.....</span></p>
+            <p id="word2" class="p1"><span class="p_word1">世界海拔最高峰是哪里？</span><span  class="p_word2">珠穆拉玛峰</span></p>
+            <p id="word3" class="p2"><span class="p_word1">想在最火的科技是什么？</span><span  class="p_word2">AR、VR、MR、AI人工智能......</span></p>
+            <p id="word4" class="p1"><span class="p_word1">有不懂的问题怎么办？</span><span  class="p_word2">点击百度问百度知道</span></p>
+        </div>
+        <img class="threeD animated hinge_3 infinite b_to_t"   style="left:714px;top: 170px;" src="h5_img/main/middle.png">
+        <img class="threeD animated hinge_2 infinite b_to_t"   style="left:533px;top: 426px;" src="h5_img/main/left_1.png">
+        <img class="threeD animated hinge_2 infinite b_to_t"   style="left:646px;top: 345px;" src="h5_img/main/back_left.png">
+        <img class="threeD animated hinge_2 infinite b_to_t"   style="left:1012px;top: 320px;" src="h5_img/main/back_right.png">
+        <img class="threeD" data-name="left"  style="left:442px;top: 436px;width: 100px;" src="">
+        <img class="threeD" data-name="right" style="left:1059px;top: 357px;" src="">
+        <img class="threeD animated hinge_4 infinite anim3" data-name="right_1" style="left:1125px;top: 420px;" src="">
+        <div >
+            <img class="title" src="h5_img/tag/tag_1.png" style="left:1119px;top: 210px;">
+            <img class="title" src="h5_img/tag/tag_2.png" style="left:539px;top: 358px;" >
+            <img class="title title1" data-src="tag_1" src="h5_img/tag/tag_3.png" style="left:1345px;top: 436px;" >
+            <img class="title title1" data-src="tag_3" src="h5_img/tag/tag_4.png" style="left:1224px;top: 293px;" >
+            <img class="title title1" data-src="tag_4" src="h5_img/tag/tag_5.png" style="left:366px;top: 467px;" >
+            <img class="title title1" data-src="tag_2" src="h5_img/tag/tag_6.png" style="left:730px;top: 677px;" >
+
+        </div>
+    </div>
+
+</div>
+<img class="threeD fixed fixed-top" data-name="top" src="">
+<img class="threeD fixed fixed-bottom" data-name="bottom"   src="">
+<!--二级界面-->
+<div id="popping">
+    <div id="pop">
+        <a id="popButton"  href="javascript:void(0);"></a>
+        <span id="popClose"></span>
+    </div>
+</div>
+
+<!--手机横屏提示-->
+<div id="orientLayer" class="mod-orient-layer" >
+    <div class="mod-orient-layer__content">
+        <i class="icon mod-orient-layer__icon-orient"></i>
+
+        <div class="mod-orient-layer__desc">请将手机竖起来哟</div>
+
+    </div>
+</div>
+
+<script src="../../lib/jquery.min.js"></script>
+<script src="../../lib/zepto.min.js"></script>
+<script src="img.js"></script>
+<script src="baidu_h5.js"></script>
+
+</body>
+</html>
