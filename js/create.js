@@ -27,7 +27,7 @@
     defaultDirectionalLight.shadow.camera.zoom = 4;
 
     //创建新的相机
-    var camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.01, 12000);
+    var camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 1, 12000);
     
 
     mainScene.add(defaultAmbientLight);

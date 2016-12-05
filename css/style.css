@@ -123,6 +123,7 @@ canvas.active_1{  animation: fade-out;  animation-duration: 4s;  -webkit-animati
 
 
 @media screen and (min-width:0px)  and (max-width: 789px){
+    .row{width: 80%;max-width: 550px;}
     .preview-full>li{width: 45px;height: 45px;}
     .preview-full .p-full{top:10px;}
     .preview-full .p-vr{top:65px;}

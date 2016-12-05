@@ -34,7 +34,7 @@ function  SphereImg(img,name,rotation) {
             var t=setTimeout(function(){
                 $(".loading").fadeOut();
                 clearTimeout(t);
-            },3000)
+            },1000)
         })
            
     });

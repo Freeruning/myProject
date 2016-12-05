@@ -3,7 +3,7 @@ $(function () {
 
 });
 function saku(){
-    var particles = [],particle,AMOUNTX=35,AMOUNTY=35;
+    var particles = [],particle,AMOUNTX=30,AMOUNTY=30;
     var PI2 = Math.PI * 2;
     var windowHalfX = window.innerWidth / 2,
         windowHalfY = window.innerHeight / 2;
@@ -11,7 +11,7 @@ function saku(){
     console.log(windowHalfX);
     console.log(windowHalfY);
 
-    var speed=0.7;
+    var speed=1;
     var aaf = new THREE.TextureLoader().load( 'images/xue_1.png');
     var abf = new THREE.TextureLoader().load( 'images/xue_2.png');
     var acf = new THREE.TextureLoader().load( 'images/xue_3.png');
@@ -28,7 +28,7 @@ function saku(){
             particle.position.x = Math.random() * distance *2 - distance;
             particle.position.y = Math.random() * distance *2 - distance;
             particle.position.z = Math.random() * distance *2 - distance;
-            particle.scale.z=particle.scale.x=particle.scale.y=Math.random()*2+3;
+            particle.scale.z=particle.scale.x=particle.scale.y=Math.random()*2+10;
 
             mainScene.add( particle );
         }
@@ -38,20 +38,15 @@ function saku(){
         for (var i = 0; i < particles.length; i++) {
             var particle = particles[i];
 
-            with(particle.position)
-            {
-                if(y>-distance){
-                    y-=speed;
-                }else {
-                    y+=distance*2;
-                }
-
-                if(x>-distance){
-                    x-=speed/2;
-                } else {
-                    x+=distance *2;
-                }
-
+            if(particle.position.y>-distance){
+                particle.position.y-=speed;
+            }else {
+                particle.position.y+=distance*2;
+            }
+            if(particle.position.x>-distance){
+                particle.position.x-=speed/2;
+            } else {
+                particle.position.x+=distance *2;
             }
         }
 

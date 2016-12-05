@@ -21,8 +21,10 @@ $(function () {
 
 });
 
-function onPalyMusic(){
-    var $music=$('#creationMusic');
+function onPalyMusic($music, src){
+    if(src){
+        $music.attr('src', src);
+    }
     if($music.attr('src')) {
         if($music[0].paused){
             $(this).removeClass("music-1").addClass("music rotate");
