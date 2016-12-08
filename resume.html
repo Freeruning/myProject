@@ -35,19 +35,21 @@
             from { transform:rotateZ(0deg); }
             to { transform:rotateZ(360deg); }
         }
-        .header-p{font-size: 12px;margin:-37px 0 0 70px;text-align: center;cursor:text; }
-        .header-p p{padding: 3px 8px;}
+        .header-p{width:100px;font-size: 12px;margin:-37px 0 0 70px;text-align: center;cursor:text; }
+        .header-p p{padding: 3px 8px;color:#fff;}
         .header-p .p1{border-bottom: 1px solid #ccc;}
         .header-p .p1:before{content: "周轩";}
-        .header-p .p2:before{content: "前端工程";}
+        .header-p .p2:before{content: "前端小学生";}
         .header-p:hover .p1:before{content: "Resume";}
         .header-p:hover .p2:before{content: "个人简历";}
+        nav{margin-bottom:0;}
+        .navbar-inverse{background-color: transparent;}
     </style>
 </head>
 <body class="fp-viewing-page5" style="font-size: 14px;">
 <!-- header navigation -->
 <header style="opacity: 1;">
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -275,7 +277,7 @@
                     </div>
                 </div>
                 <div id="demo_content_list">
-                    <ul class="demo_box">
+                    <ul class="demo_box clearfix">
                         <li class="demo_scale">
                             <div class="demo_box_content">
                                 <div class="demo_box_hover">

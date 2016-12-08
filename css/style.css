@@ -8,7 +8,7 @@ textarea{overflow:auto;resize:none;}
 label,summary{cursor:default;}
 a,button{cursor:pointer;}
 a,a:hover{text-decoration:none;color:#333;}
-body,textarea,input,button,select{font:12px/1.14  "Microsoft YaHei","黑体","宋体",arial,simsun;color:#333;outline:0;}
+body,textarea,input,button,select{font:14px/1.14  "Microsoft YaHei","黑体","宋体",arial,simsun;outline:0;}
 * {box-sizing: border-box;}
 
 

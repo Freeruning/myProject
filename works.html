@@ -12,7 +12,7 @@
     <link href="css/style.css" rel="stylesheet"/>
 
     <style>
-        body{background: url(images/home-bg.png) #cce8cf; }
+        body{background: url(images/bg.jpg) #cce8cf; }
         .github,.jian,.wx{width: 40px;height: 40px;border-radius: 20px;margin:18px;}
         .github{background-color: #f2f2f2;}
         footer .connection{margin-bottom: 20px;}
@@ -21,12 +21,20 @@
         .btn-primary:hover,.btn-primary:focus{background-color: #023562;}
         .navbar-header .logo{width: 30px;height: 30px;margin: 10px 0 0 15px;border-radius:50%; }
         .navbar-header .logo:hover{ -webkit-box-shadow:0 0 10px 5px #0CC;  -moz-box-shadow:0 0 10px 5px #0CC; box-shadow:0 0 10px 5px #0CC;  }
-
+        nav{margin-bottom:0;}
+        .navbar-inverse{background-color: transparent;border-bottom:1px solid #fff;  }
+        .header-p{width:100px;font-size: 12px;margin:-37px 0 0 70px;text-align: center;cursor:text; }
+        .header-p p{padding: 3px 8px;}
+        .header-p .p1{border-bottom: 1px solid #ccc;}
+        .header-p .p1:before{content: "周轩";}
+        .header-p .p2:before{content: "前端小学生";}
+        .header-p:hover .p1:before{content: "Resume";}
+        .header-p:hover .p2:before{content: "项目作品";}
     </style>
 
 </head>
 <body>
-<nav class="navbar navbar-inverse navbar-fixed-top">
+<nav class="navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -38,6 +46,10 @@
             <a href="index.html">
                 <img src="images/user_logo.jpg" class="logo animated infinite hinge rotate" >
             </a>
+            <div class="header-p">
+                <p class="p1"></p>
+                <p class="p2"></p>
+            </div>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
